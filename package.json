@@ -1,0 +1,75 @@
+{
+  "name": "questionnaire-answer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "dingtalk-jsapi": "^2.13.51",
+    "qrcode": "^1.4.4",
+    "vant": "^3.1.5",
+    "vconsole": "^3.9.1",
+    "vue": "^3.1.5",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "~4.1.5"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "@vue/typescript/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "vue/no-unused-components": 0,
+      "no-var": 1,
+      "@typescript-eslint/ban-ts-comment": 1,
+      "no-empty": 0,
+      "@typescript-eslint/no-inferrable-types": 0,
+      "no-debugger": 1,
+      "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/no-empty-function": 0,
+      "no-prototype-builtins": 0,
+      "@typescript-eslint/explicit-module-boundary-types": 0,
+      "vue/no-unused-vars": 1,
+      "vue/no-mutating-props": 1,
+      "@typescript-eslint/ban-types": 0
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,189 @@
+@import 'variable.less';
+
+html, body {
+  background-color: #F4F6F9;
+}
+
+.form-control {
+  position: relative;
+
+  &.active {
+  
+    &.visible {
+      
+      > .question-item {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:not(.active) {
+    
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  &.visible {
+
+    > .question-item {
+      opacity: 1;
+    }
+
+    &:before {
+      opacity: 0;
+    }
+  }
+  
+  &:before {
+    content: '隐藏';
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    right: 0px;
+    color: white;
+    background-color: @primary-color;
+    font-size: 12px;
+    padding: 0px 6px 0px 8px;
+    border-bottom-left-radius: 6px;
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  > .question-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.5;
+    padding: 15px;
+    opacity: 0.5;
+
+    > .label {
+      text-align: left;
+      margin-bottom: 10px;
+      
+      > * {
+        display: inline;
+      }
+
+      > p {
+        margin-bottom: 0px;
+      }
+
+      > ol {
+        padding-left: 30px;
+
+        > li {
+          list-style-type: decimal;
+        }
+      }
+    }
+  }
+}
+
+.question-item {
+
+  &.question-label {
+    padding: 0px;
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+
+    + .question-item {
+      margin-top: 5px !important;
+    }
+  }
+
+  &.required {
+    
+    > .label {
+      
+      &:before {
+        content: '(必填)';
+        display: inline-block;
+        margin-right: 4px;
+        color: #CCCCCC;
+        font-size: 12px;
+        font-family: inherit;
+        line-height: 1;
+      }
+    }
+  }
+
+  // 不换行（每条一行）
+  &[layout="layout-span-1"] {
+
+    > .van-radio-group,
+    > .van-checkbox-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+  
+      > .van-radio,
+      > .van-checkbox {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  // 自动换行
+  &[layout="layout-wrap"] {
+
+  }
+
+  // 两项换行
+  &[layout="layout-span-2"] {
+
+    > .van-radio-group,
+    > .van-checkbox-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      width: 100%;
+  
+      > .van-radio,
+      > .van-checkbox {
+        width: 49.999%;
+        margin-right: 0px;
+      }
+    }
+  }
+
+  // 两项换行
+  &[layout="layout-span-3"] {
+
+    > .van-radio-group,
+    > .van-checkbox-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      width: 100%;
+  
+      > .van-radio,
+      > .van-checkbox {
+        width: 33.333%;
+        margin-right: 0px;
+      }
+    }
+  }
+
+  // 两项换行
+  &[layout="layout-span-4"] {
+
+    > .van-radio-group,
+    > .van-checkbox-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      width: 100%;
+  
+      > .van-radio,
+      > .van-checkbox {
+        width: 24.999%;
+        margin-right: 0px;
+      }
+    }
+  }
+}
